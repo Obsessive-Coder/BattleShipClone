@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>scr_End_Placement_Phase</script>
+            <script>scr_Button_Clicked</script>
           </argument>
           <argument>
             <kind>0</kind>

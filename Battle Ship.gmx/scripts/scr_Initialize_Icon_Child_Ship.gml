@@ -1,18 +1,17 @@
-//Initialize the child icon ship
-/*
-argument0 = the size of the ship
-argument1 = the sprite for the ship
-argument2 = the y position of the icon ship
-*/
+///scr_Initialize_Icon_Child_Ship(ship_size, ship_sprite, y_pos);
+
+var ship_size = argument0;
+var ship_sprite = argument1;
+var y_pos = argument2;
 
 //call the parent create event
 event_inherited();
 
 //with the instance set its properties
 with(self){
-    int_ship_size = argument0;
-    int_index_sprite = argument1;
+    int_ship_size = ship_size;
+    int_index_sprite = ship_sprite;
     
-    x = 360;
-    y = argument2;
+    x = 540;
+    y = y_pos;
 }

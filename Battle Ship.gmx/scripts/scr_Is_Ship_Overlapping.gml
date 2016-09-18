@@ -1,10 +1,12 @@
-//argument0 = the gameboard to check
-//argument1[] = the array that holds the region coords for the ship
+///scr_Is_Ship_Overlapping(game_board, ary_region_coords);
 
-//if the highest value in the region is 0 then return false because no ships are there
-if(ds_grid_get_max(argument0, argument1[0], argument1[1], argument1[2], argument1[3]) >= 1){
-    return true;
+var game_board = argument0;
+var ary_region_coords = argument1;
+
+//if the highest value in the region is 0 then return false because no ships are overlapped
+if(ds_grid_get_max(game_board, ary_region_coords[0], ary_region_coords[1], ary_region_coords[2], ary_region_coords[3]) >= 1){
+  return true;
 }
-else{
-    return false;
-}
+
+//the ship is not overlapping another ship
+return false;

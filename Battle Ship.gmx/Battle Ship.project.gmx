@@ -7,74 +7,122 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="Ships">
-      <sprite>sprites\spr_yellow_ship</sprite>
-      <sprite>sprites\spr_pink_ship</sprite>
-      <sprite>sprites\spr_blue_ship</sprite>
-      <sprite>sprites\spr_purple_ship</sprite>
-      <sprite>sprites\spr_green_ship</sprite>
+      <sprite>sprites\spr_patrol_boat</sprite>
+      <sprite>sprites\spr_submarine</sprite>
+      <sprite>sprites\spr_cruiser</sprite>
+      <sprite>sprites\spr_battle_ship</sprite>
+      <sprite>sprites\spr_aircraft_carrier</sprite>
       <sprites name="Icons">
-        <sprite>sprites\spr_icon_yellow_ship</sprite>
-        <sprite>sprites\spr_icon_pink_ship</sprite>
-        <sprite>sprites\spr_icon_blue_ship</sprite>
-        <sprite>sprites\spr_icon_purple_ship</sprite>
-        <sprite>sprites\spr_icon_green_ship</sprite>
+        <sprite>sprites\spr_icon_patrol_boat</sprite>
+        <sprite>sprites\spr_icon_submarine</sprite>
+        <sprite>sprites\spr_icon_cruiser</sprite>
+        <sprite>sprites\spr_icon_battle_ship</sprite>
+        <sprite>sprites\spr_icon_aircrafr_carrier</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_game_board_wall</sprite>
     <sprite>sprites\spr_button</sprite>
+    <sprite>sprites\spr_bomb_icon</sprite>
+    <sprite>sprites\spr_miss</sprite>
+    <sprite>sprites\spr_explosion_small</sprite>
+    <sprite>sprites\spr_cursor_cross_hair</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_Game_Board</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\scr_Game_Controller.gml</script>
     <scripts name="Initializers">
       <script>scripts\scr_Initialize_Game.gml</script>
       <script>scripts\scr_Initialize_Game_Board.gml</script>
       <script>scripts\scr_Initialize_Ship.gml</script>
       <script>scripts\scr_Initialize_Icon_Parent_Ship.gml</script>
       <script>scripts\scr_Initialize_Icon_Child_Ship.gml</script>
+      <script>scripts\scr_Initialize_Player_Parent.gml</script>
+      <script>scripts\scr_Intitialize_Player_Human.gml</script>
+      <script>scripts\scr_Initialize_Player_NPC.gml</script>
     </scripts>
-    <script>scripts\scr_Get_Grid_Coords.gml</script>
     <scripts name="Ship">
       <script>scripts\scr_Create_Ship.gml</script>
       <script>scripts\scr_Step_Ship.gml</script>
-      <script>scripts\scr_Follow_Mouse.gml</script>
-      <script>scripts\scr_Collision_Check.gml</script>
+      <script>scripts\scr_Snap_Ship_To_Grid.gml</script>
+      <script>scripts\scr_Is_Ship_Collision_Free.gml</script>
       <script>scripts\scr_Rotate_Ship.gml</script>
       <script>scripts\scr_Ship_Click.gml</script>
+      <script>scripts\scr_Place_Ship.gml</script>
       <script>scripts\scr_Delete_Ship.gml</script>
       <script>scripts\scr_Create_Icon_Ship.gml</script>
-      <script>scripts\scr_Place_Ship.gml</script>
       <script>scripts\scr_Check_All_Ships_Placed.gml</script>
       <script>scripts\scr_Pick_Up_Ship.gml</script>
       <script>scripts\scr_Icon_Ship_Click.gml</script>
       <script>scripts\scr_Get_Direction.gml</script>
+      <script>scripts\scr_Validate_Ship_Placement.gml</script>
     </scripts>
-    <script>scripts\scr_Update_Ship_Position.gml</script>
-    <script>scripts\scr_Get_Ship_Region_Coords.gml</script>
+    <scripts name="AI">
+      <script>scripts\scr_Get_Random_Coords.gml</script>
+      <script>scripts\scr_Get_Random_Adjacent_Coords.gml</script>
+      <script>scripts\scr_Get_Adjacent_Coords.gml</script>
+      <script>scripts\scr_Switch_Direction.gml</script>
+      <script>scripts\scr_Is_Ship_In_Info_Grid.gml</script>
+      <script>scripts\scr_Add_Ship_To_Hit_Info_Grid.gml</script>
+      <script>scripts\scr_Remove_Ship_From_Hit_Info_Grid.gml</script>
+      <script>scripts\scr_Update_Ship_Hit_Info_Grid.gml</script>
+      <script>scripts\scr_Determine_NPC_Coords.gml</script>
+      <script>scripts\scr_Get_Previous_Hit_Ship.gml</script>
+      <script>scripts\scr_Get_Previous_Hit_Coords.gml</script>
+      <script>scripts\scr_Get_Previous_Hit_Direction.gml</script>
+      <script>scripts\scr_Does_Hit_Info_Exist.gml</script>
+    </scripts>
+    <script>scripts\scr_Get_Grid_Coords.gml</script>
+    <script>scripts\scr_Convert_To_Screen_Coords.gml</script>
     <script>scripts\scr_End_Placement_Phase.gml</script>
-    <script>scripts\scr_Place_NPC_Ship.gml</script>
-    <script>scripts\scr_Choose_Ship_Size.gml</script>
+    <script>scripts\scr_Get_NPC_Ships.gml</script>
+    <script>scripts\scr_Choose_Ship_To_Place.gml</script>
+    <script>scripts\scr_Update_Ship_Position.gml</script>
+    <script>scripts\scr_Position_NPC_Ship.gml</script>
+    <script>scripts\scr_Update_NPC_Ship_Coords.gml</script>
+    <script>scripts\scr_Get_Ship_Region_Coords.gml</script>
     <script>scripts\scr_Is_Ship_Inbounds.gml</script>
     <script>scripts\scr_Is_Ship_Overlapping.gml</script>
     <script>scripts\scr_Remove_Ship_From_Choices.gml</script>
-    <script>scripts\scr_Get_Ship_Choices.gml</script>
     <script>scripts\scr_Choose_Start_X_Y_Coords.gml</script>
+    <script>scripts\scr_Get_NPC_Ships_Left_To_Place.gml</script>
+    <script>scripts\scr_Update_Ship_Is_Placed_Property.gml</script>
+    <script>scripts\scr_Hit_Status.gml</script>
+    <script>scripts\scr_Offset_Sprite.gml</script>
+    <script>scripts\scr_Hit_Ship.gml</script>
+    <script>scripts\scr_Is_Ship_Sunk.gml</script>
+    <script>scripts\scr_Is_Game_Over.gml</script>
+    <script>scripts\scr_End_Game.gml</script>
+    <script>scripts\scr_Start_Turn.gml</script>
+    <script>scripts\scr_Take_Turn.gml</script>
+    <script>scripts\scr_Validate_Player_Grid_Coord_Selection.gml</script>
+    <script>scripts\scr_End_Turn.gml</script>
+    <script>scripts\scr_Sink_Ship.gml</script>
+    <script>scripts\scr_Are_Coords_Called.gml</script>
+    <script>scripts\scr_Add_To_Called_Coords.gml</script>
+    <script>scripts\scr_Button_Clicked.gml</script>
+    <script>scripts\scr_Step_Game_Controller.gml</script>
   </scripts>
   <objects name="objects">
+    <objects name="Players">
+      <object>objects\obj_player_parent</object>
+      <object>objects\obj_player_human</object>
+      <object>objects\obj_player_npc</object>
+    </objects>
     <object>objects\obj_game_controller</object>
     <object>objects\obj_ship</object>
-    <object>objects\obj_board_wall</object>
     <objects name="Ship Icons">
       <object>objects\obj_icon_parent_ship</object>
-      <object>objects\obj_icon_yellow_ship</object>
-      <object>objects\obj_icon_pink_ship</object>
-      <object>objects\obj_icon_blue_ship</object>
-      <object>objects\obj_icon_purple_ship</object>
-      <object>objects\obj_icon_green_ship</object>
+      <object>objects\obj_icon_patrol_boat</object>
+      <object>objects\obj_icon_submarine</object>
+      <object>objects\obj_icon_cruiser</object>
+      <object>objects\obj_icon_battle_ship</object>
+      <object>objects\obj_icon_aircraft_carrier</object>
     </objects>
     <object>objects\obj_button</object>
+    <object>objects\obj_hit</object>
+    <object>objects\obj_miss</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Main</room>

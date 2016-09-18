@@ -1,4 +1,4 @@
-///Initialize Game Board
+///scr_Initialize_Game_Board();
 
 //create a grid with 10 rows and 10 columns and
 //set all of its cells to 0(empty)
