@@ -6,4 +6,7 @@ This is a very simple clone of the classic board game Battleship. Battleship is 
 
 ADDITIONAL NOTES:
 - The first iteration has limited colors and backgrounds and may never be updated.
-- 
+
+<p align="center">
+  <img src="https://github.com/Obsessive-Coder/Weather-App/blob/master/images/screenshot.png?raw=true" width="550">
+</p>
