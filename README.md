@@ -8,5 +8,5 @@ ADDITIONAL NOTES:
 - The first iteration has limited colors and backgrounds and may never be updated.
 
 <p align="center">
-  <img src="https://github.com/Obsessive-Coder/Weather-App/blob/master/images/screenshot.png?raw=true" width="550">
+  <img src="https://github.com/Obsessive-Coder/BattleShipClone/blob/master/images/battleship.png?raw=true" width="550">
 </p>
